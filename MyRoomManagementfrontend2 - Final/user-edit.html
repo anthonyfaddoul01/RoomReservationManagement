@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | User Edit</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/addstyles.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../../index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="../../index3.html" class="brand-link">
+      <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="admincalendar.html" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p>
+                Calendar
+                <span class="badge badge-info right">2</span>
+              </p>
+            </a>
+          </li>
+              <li class="nav-item">
+                <a href="profile.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Profile</p>
+                </a>
+              
+              <li class="nav-item">
+                <a href="companies.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Companies</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="users.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Employees</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="user-add.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Employee Add</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="user-edit.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Employee Edit</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="user-detail.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Employee Detail</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="user-delete.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Employee Delete</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="rooms.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Rooms</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="reservations.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reservations</p>
+                </a>
+              </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Employee Edit</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Employee Edit</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Employee To Change</h3>
+    
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="inputName">Employee Email</label>
+                <input type="text" id="inputEmail" class="form-control" onchange="fetchUserByEmail()">
+              </div>
+              
+            <!-- /.card-body -->
+          </div>
+          
+          <!-- /.card -->
+        </div>
+        
+          <!-- /.card -->
+        </div>
+          <div class="col-md-6">
+            <div class="card card-secondary">
+              <div class="card-header">
+                <h3 class="card-title">New Employee</h3>
+          
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="inputEmployeeName">Employee Name</label>
+                  <input type="text" id="inputEmployeeName" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="inputEmployeeEmail">Employee Email</label>
+                  <input type="text" id="inputEmployeeEmail" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                  <label for="inputRole">Role</label>
+                  <select id="inputRole" class="form-control custom-select">
+                    <option disabled selected>Select one</option>
+                    <option>Admin</option>
+                    <option>Employee</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="inputCompanyName">Company</label>
+                  <input type="text" id="inputCompanyName" class="form-control">
+                </div>
+                
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            
+          </div>
+        
+        <div class="row">
+          <div class="col-12">
+            <div class="button-container">
+              <a href="#" class="btn btn-secondary left-button2">Cancel</a>
+              <input type="button" value="Save Changes" class="btn btn-success right-button2" onclick="updateUser()">
+            </div>
+          </div>
+          
+        </div>
+        
+    </section>
+    <!--
+    <div class="col-md-6">
+      <div class="card card-secondary">
+        <div class="card-header">
+          <h3 class="card-title">Users List</h3>
+        </div>
+        <div class="card-body" id="usersList">
+          <!- The list of companies will be dynamically populated here 
+        </div>
+      </div>
+    </div>
+    -->
+    
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.2.0
+    </div>
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  var jwt = localStorage.getItem("Jwt");
+  let users = [];
+  function displayUsersList() {
+  const usersListContainer = document.getElementById("usersList");
+
+  if (users.length === 0) {
+    usersListContainer.innerHTML = "<p>No users found.</p>";
+    return;
+  }
+
+  const usersListHTML = users.map((user) => {
+    return `<div class="user-item">
+              <p><strong>${user.name} : ${user.email}</strong></p>
+            </div>`;
+  }).join("");
+
+  usersListContainer.innerHTML = usersListHTML;
+}
+  function fetchUsers() {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://localhost:7037/api/User");
+    xhr.setRequestHeader("Authorization", "Bearer " + jwt);
+    xhr.onreadystatechange = function () {
+      if (this.readyState === 4) {
+        if (this.status === 200) {
+          try {
+            const response = JSON.parse(this.responseText);
+            users = response.$values;
+            console.log(users);
+            displayUsersList();
+          } catch (error) {
+            console.error("Error parsing response JSON:", error);
+          }
+        } else {
+          console.error("Error fetching users:", this.status);
+        }
+      }
+    };
+    xhr.send();
+  }
+
+  fetchUsers();
+
+  function fetchUserByEmail() {
+    const userEmail = document.getElementById("inputEmail").value;
+
+    if (!userEmail) {
+      console.error("Company name cannot be empty.");
+      return;
+    }
+
+    const selectedUser = users.find((user) => user.email === userEmail);
+    console.log("Fetching user information for:", userEmail);
+
+    const element5 = document.getElementById("inputEmployeeName");
+element5.placeholder = selectedUser.name;
+
+const element2 = document.getElementById("inputEmployeeEmail");
+element2.placeholder = selectedUser.email;
+
+const element3 = document.getElementById("inputCompanyName");
+element3.placeholder = selectedUser.company.name;
+
+
+const element9 = document.getElementById("inputRole");
+const statusToSelect = selectedUser.role;
+
+for (let i = 0; i < element9.options.length; i++) {
+  if (element9.options[i].value === statusToSelect) {
+    element9.options[i].selected = true;
+    break; 
+  }
+}
+
+    if (selectedUser) {
+      const userId = selectedUser.id;
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", `https://localhost:7037/api/User/${userId}`);
+      xhr.setRequestHeader("Authorization", "Bearer " + jwt);
+      xhr.onreadystatechange = function () {
+        if (this.readyState === 4) {
+          if (this.status === 200) {
+            try {
+              const userInfo = JSON.parse(this.responseText);
+              console.log(userInfo);
+            } catch (error) {
+              console.error("Error parsing user information JSON:", error);
+            }
+          } else {
+            console.error("Error fetching user information:", this.status);
+          }
+        }
+      };
+      xhr.send();
+    } else {
+      console.error("User not found with the given name.");
+    }
+  }
+
+  function updateUser() {
+  const userEmail = document.getElementById("inputEmail").value;
+  if (!userEmail) {
+    console.error("User email cannot be empty.");
+    return;
+  }
+
+  const selectedUser = users.find((user) => user.email === userEmail);
+  console.log("Fetching user information for:", userEmail);
+  if (selectedUser) {
+    const userId = selectedUser.id;
+    const xhr = new XMLHttpRequest();
+    xhr.open("PUT", `https://localhost:7037/api/User/${userId}`);
+    xhr.setRequestHeader("Authorization", "Bearer " + jwt);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    const companyName = document.getElementById("inputCompanyName").value;
+    const selectedCompany = companies.find((company) => company.name === companyName);
+    console.log("New email:", document.getElementById("inputEmployeeEmail").value);
+    console.log("New role:", document.getElementById("inputRole").value);
+    if (selectedCompany) {
+      const updatedUserData = {
+        name: document.getElementById("inputEmployeeName").value || selectedUser.name,
+        email: document.getElementById("inputEmployeeEmail").value || selectedUser.email,
+        role: document.getElementById("inputRole").value || selectedUser.role,
+        companyId: selectedCompany.id || selectedUser.company.id,
+        
+      };
+      console.log("Updating user data:", updatedUserData);
+      xhr.onreadystatechange = function () {
+        if (this.readyState === 4) {
+          console.log(this.responseText);
+          if (this.status === 200) {
+            alert("User information updated successfully.")
+            console.log("User information updated successfully.");
+            location.reload()
+          } else {
+            console.error("Error updating user information:", this.status);
+          }
+        }
+      };
+
+      xhr.send(JSON.stringify(updatedUserData));
+    } else {
+      console.error("User not found with the given name.");
+    }
+  } else {
+    console.error("User not found with the given email.");
+  }
+}
+
+  let companies = [];
+
+function fetchCompanies() {
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://localhost:7037/api/CompanyContoller");
+  xhr.setRequestHeader("Authorization", "Bearer " + jwt);
+  xhr.onreadystatechange = function () {
+    if (this.readyState === 4) {
+      if (this.status === 200) {
+        try {
+          const response = JSON.parse(this.responseText);
+          companies = response.$values;
+          console.log(companies); 
+
+        } catch (error) {
+          console.error("Error parsing response JSON:", error);
+        }
+      } else {
+        console.error("Error fetching companies:", this.status);
+      }
+    }
+  };
+  xhr.send();
+}
+fetchCompanies();
+
+
+</script>
+
+
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+</body>
+</html>

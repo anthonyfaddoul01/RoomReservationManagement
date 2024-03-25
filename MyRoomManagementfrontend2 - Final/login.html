@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Log in</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <img class="mb-4" src="dist/img/logo.jpg" alt="" height="300">
+    <a href="index2.html"><b>Room Management</b></a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Sign in to start your session</p>
+
+      <form onsubmit="return login()">
+        <div class="input-group mb-3">
+          <input type="email" id="username" class="form-control" placeholder="Email">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" id="password" class="form-control" placeholder="Password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember">
+              <label for="remember">
+                Remember Me
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+      <!-- /.social-auth-links -->
+
+      <p class="mb-1">
+        <a href="forgot-password.html">I forgot my password</a>
+      </p>
+      <p class="mb-0">
+        <a href="register.html" class="text-center">Register a new membership</a>
+      </p>
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+
+<script>
+  var jwt = localStorage.getItem("Jwt");
+
+  function login() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://localhost:7037/api/auth/SignIn");
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify({
+      "Email": username,
+      "Password": password
+    }));
+
+    xhr.onreadystatechange = function () {
+      if (this.readyState == 4) {
+        const objects = JSON.parse(this.responseText);
+        console.log(objects);
+        if (objects['status'] == 'ok') {
+          localStorage.setItem("Jwt", objects['accessToken']);
+          fetchUserByEmail();
+          
+          Swal.fire({
+            text: objects['message'],
+            icon: 'success',
+            confirmButtonText: 'OK'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              redirectToAppropriatePage();
+            }
+          });
+        } else {
+          Swal.fire({
+            text: objects['message'],
+            icon: 'error',
+            confirmButtonText: 'OK'
+          });
+        }
+      }
+    };
+    return false;
+  }
+  function redirectToAppropriatePage() {
+  const userRole = localStorage.getItem("UserRole");
+  if (userRole === "Admin") {
+    window.location.href = 'admincalendar.html';
+  } else if (userRole === "Employee") {
+    window.location.href = 'calendar.html';
+  } else {
+    console.error("Unknown user role:", userRole);
+  }
+}
+  let users = [];
+  const userRole = ""; 
+  
+  const userId = ""; 
+  function fetchUserByEmail() {
+    const userEmail = document.getElementById("username").value;
+
+    if (!userEmail) {
+      console.error("Email cannot be empty.");
+      return;
+    }
+
+    // Find the user with the input email
+    const selectedUser = users.find((user) => user.email === userEmail);
+    console.log("Fetching user information for:", userEmail);
+    
+    if (selectedUser) {
+      // Assuming you're using the selected user's ID to fetch details from the server
+      const userId = selectedUser.id;
+      
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", `https://localhost:7037/api/User/${userId}`);
+      xhr.setRequestHeader("Authorization", "Bearer " + jwt);
+      xhr.onreadystatechange = function () {
+        if (this.readyState == 4) {
+          if (this.status === 200) {
+            try {
+              const response = JSON.parse(this.responseText);
+              
+              // Assuming the response contains user details including role
+              const matchedUser = response;
+              console.log(JSON.stringify(matchedUser));
+              localStorage.setItem("TheUser", JSON.stringify(matchedUser)); 
+              console.log(localStorage.getItem("TheUser"));
+              localStorage.setItem("UserRole", matchedUser.role); 
+              console.log(localStorage.getItem("UserRole"));
+              localStorage.setItem("UserID", matchedUser.id);
+              console.log(localStorage.getItem("UserID"));
+              localStorage.setItem("UserEmail", matchedUser.email);
+              console.log(localStorage.getItem("UserEmail")); 
+              localStorage.setItem("UserCompany", matchedUser.company.id);
+              console.log(localStorage.getItem("UserCompany"));
+              if (matchedUser) {
+                localStorage.setItem("UserRole", matchedUser.role);
+                redirectToAppropriatePage();
+              } else {
+                console.error("User not found in the response.");
+              }
+            } catch (error) {
+              console.error("Error parsing user information JSON:", error);
+            }
+          } else {
+            console.error("Error fetching user information:", this.status);
+          }
+        }
+      };
+      
+      xhr.send();
+    } else {
+      console.error("User not found with the given email.");
+    }
+}
+  // const userInfo = JSON.parse(this.responseText);
+  // console.log(userInfo);
+  fetchUsers()
+  function fetchUsers() {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://localhost:7037/api/User");
+    xhr.setRequestHeader("Authorization", "Bearer " + jwt);
+    xhr.onreadystatechange = function () {
+      if (this.readyState === 4) {
+        if (this.status === 200) {
+          try {
+            // Try parsing the response JSON
+            const response = JSON.parse(this.responseText);
+            users = response.$values; // Extract the array from the $values property
+            console.log(users); // Add this line to see the parsed data
+
+          } catch (error) {
+            console.error("Error parsing response JSON:", error);
+          }
+        } else {
+          console.error("Error fetching users:", this.status);
+        }
+      }
+    };
+    xhr.send();
+  }
+
+</script>
+</body>
+</html>

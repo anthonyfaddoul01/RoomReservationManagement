@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | User Profile</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="starter.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="../../index3.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          
+               <li class="nav-item">
+                <a href="calendar.html" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>
+                    Calendar
+                    <span id="array-length" class="badge badge-info right"></span>
+                  </p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                    <a href="profile-employee.html" class="nav-link active">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Profile</p>
+                    </a>
+              </li>
+              <li class="nav-item">
+                    <a href="rooms-employee.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Rooms</p>
+                    </a>
+              </li>
+              <li class="nav-item">
+                <a href="rooms-report.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Room report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="reservation-add-employee.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Make Reservation</p>
+                </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Profile</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">User Profile</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <!-- Profile Image -->
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <img class="profile-user-img img-fluid img-circle"
+                       src="dist/img/user4-128x128.jpg"
+                       alt="User profile picture">
+                </div>
+                <h3 id="Name" class="profile-username text-center"></h3>
+                <p class="text-muted text-center"></p>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <!-- Duplicate Profile Image -->
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <img class="profile-user-img img-fluid img-circle"
+                       src="dist/img/user4-128x128.jpg"
+                       alt="User profile picture">
+                </div>
+                <h3 id="CompanyName" class="profile-username text-center"></h3>
+                <p class="text-muted text-center"></p>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-3">
+          <div class="card card-secondary">
+            <div class="card-header">
+              <h3 class="card-title">My Details</h3>
+        
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="inputEmployeeName">Employee Name</label>
+                <input type="text" id="inputEmployeeName" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="inputEmployeeEmail">Employee Email</label>
+                <input type="text" id="inputEmployeeEmail" class="form-control">
+              </div>
+              
+              <div class="form-group">
+                <label for="inputRole">Role</label>
+                <div type="text" id="inputRole" class="form-control"></div>
+              </div>
+              <div class="form-group">
+                <label for="inputCompanyName">Company</label>
+                <div type="text" id="inputCompanyName" class="form-control"></div>
+              </div>
+              
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+          <div class="row">
+            <div class="col-12">
+              <div class="button-container">
+                <a href="#" class="btn btn-secondary left-button2">Cancel</a>
+                <input type="button" value="Save Changes" class="btn btn-success right-button2" onclick="updateUser()">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card card-secondary">
+            <div class="card-header">
+              <h3 class="card-title">My Company Details</h3>
+        
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="inputCompanyN">Company Name</label>
+                <input type="text" id="inputCompanyN" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="inputCompanyEmail">Company Email</label>
+                <input type="text" id="inputCompanyEmail" class="form-control">
+              </div>
+              
+              <div class="form-group">
+                <label for="inputStatus">Status</label>
+                <select id="inputStatus" class="form-control custom-select">
+                  <option disabled>Select one</option>
+                  <option>Active</option>
+                  <option>Inactive</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inputDescription">Description</label>
+                <textarea id="inputDescription" class="form-control" rows="3"></textarea>
+              </div>
+              
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        <div class="row">
+          <div class="col-12">
+            <div class="button-container">
+              <a href="#" class="btn btn-secondary left-button2">Cancel</a>
+              <input type="button" value="Save Changes" class="btn btn-success right-button2" onclick="updateCompany()">
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      
+      
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.2.0
+    </div>
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<script>
+var jwt = localStorage.getItem("Jwt");
+const user = localStorage.getItem("TheUser");
+const retrievedUserObject = JSON.parse(user);
+console.log("Property1:", retrievedUserObject.name);
+console.log("Property2:", retrievedUserObject.email);
+
+const element1 = document.getElementById("Name");
+element1.textContent = retrievedUserObject.name;
+
+const element5 = document.getElementById("inputEmployeeName");
+element5.placeholder = retrievedUserObject.name;
+
+const element2 = document.getElementById("inputEmployeeEmail");
+element2.placeholder = retrievedUserObject.email;
+
+const element3 = document.getElementById("inputRole");
+element3.textContent = retrievedUserObject.role;
+
+const element4 = document.getElementById("inputCompanyName");
+element4.textContent = retrievedUserObject.company.name;
+
+const element6 = document.getElementById("CompanyName");
+element6.textContent = retrievedUserObject.company.name;
+
+const element7 = document.getElementById("inputCompanyN");
+element7.placeholder = retrievedUserObject.company.name;
+
+const element8 = document.getElementById("inputCompanyEmail");
+element8.placeholder = retrievedUserObject.company.email;
+
+
+const element9 = document.getElementById("inputStatus");
+const statusToSelect = retrievedUserObject.company.status;
+
+for (let i = 0; i < element9.options.length; i++) {
+  if (element9.options[i].value === statusToSelect) {
+    element9.options[i].selected = true;
+    break; 
+  }
+}
+
+const element10 = document.getElementById("inputDescription");
+element10.placeholder = retrievedUserObject.company.description;
+
+function updateUser() {
+  const userEmail = retrievedUserObject.email;
+  const userId = retrievedUserObject.id;
+  console.log("Fetching user information for:", userEmail);
+    const xhr = new XMLHttpRequest();
+    xhr.open("PUT", `https://localhost:7037/api/User/${userId}`);
+    xhr.setRequestHeader("Authorization", "Bearer " + jwt);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    const updatedUserData = {
+      name: document.getElementById("inputEmployeeName").value || retrievedUserObject.name,
+      email: document.getElementById("inputEmployeeEmail").value || retrievedUserObject.email,
+      role: retrievedUserObject.role,
+      companyId: retrievedUserObject.company.id,
+    };
+    console.log("Updating user data:", updatedUserData);
+    xhr.onreadystatechange = function () {
+        if (this.readyState === 4) {
+          console.log(this.responseText);
+          if (this.status === 200) {
+            alert("User information updated successfully.\nInformation will change after next login!");
+            console.log("User information updated successfully.");
+          } else {
+            console.error("Error updating user information:", this.status);
+          }
+        }
+      };
+
+      xhr.send(JSON.stringify(updatedUserData));
+
+}
+
+function updateCompany() {
+  const companyId = retrievedUserObject.company.id;
+  const companyName = retrievedUserObject.company.name;
+  console.log("Fetching company information for:", companyName);
+    const xhr = new XMLHttpRequest();
+    xhr.open("PUT", `https://localhost:7037/api/CompanyContoller/${companyId}`);
+    xhr.setRequestHeader("Authorization", "Bearer " + jwt);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    const updatedCompanyData = {
+      name: document.getElementById("inputCompanyN").value || retrievedUserObject.company.name,
+      email: document.getElementById("inputCompanyEmail").value || retrievedUserObject.company.email,
+      status: document.getElementById("inputStatus").value || retrievedUserObject.company.status,
+      description: document.getElementById("inputDescription").value || retrievedUserObject.company.description,
+    };
+    console.log("Updating company data:", updatedCompanyData);
+    xhr.onreadystatechange = function () {
+        if (this.readyState === 4) {
+          console.log(this.responseText);
+          if (this.status === 200) {
+            alert("Company information updated successfully.\nInformation will change after next login!");
+            console.log("Company information updated successfully.");
+          } else {
+            console.error("Error updating company information:", this.status);
+          }
+        }
+      };
+
+      xhr.send(JSON.stringify(updatedCompanyData));
+
+}
+
+
+
+</script>
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-button {
+  float: left;
+  margin-right: 10px;
+  margin-left: -1605px;
+  margin-top: 520px;
+}
+
+.right-button {
+  float: right;
+  margin-top: 520px;
+  margin-right: 7px;
+}
+
+/* Adjust margin between buttons and "General" box */
+.row:first-child {
+  margin-bottom: 20px;
+}
+
+.left-button2 {
+  float: left;
+  margin-right: 10px;
+  margin-left: -1605px;
+  margin-top: 450px;
+}
+
+.right-button2 {
+  float: right;
+  margin-top: 450px;
+  margin-right: 7px;
+}
+
+.action-button{
+  margin-right:200px
+}
+
+.card-secondary2 .card-body2 {
+  display: grid;
+  grid-template-columns: max-content 1fr; /* Two-column layout */
+  grid-gap: 10px; /* Adjust this value as needed */
+}
+
+.card-secondary2 .card-body2 label {
+  font-weight: bold; /* Add bold font to labels */
+}
+
+.left-button3 {
+  float: left;
+  margin-right: 1110px;
+  margin-left: -5px;
+  margin-top: 0px;
+  
+}
+
+.right-button3 {
+  
+  margin-top: 0px;
+  margin-right: 1200px;
+  margin-left: -520px;
+}
+
+.left-button4 {
+  float: left;
+  margin-right: 10px;
+  margin-left: -1605px;
+  margin-top: 530px;
+}
+
+.right-button4 {
+  float: right;
+  margin-top: 530px;
+  margin-right: 7px;
+}
+
+.right-button5 {
+  float: right;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  margin-left: 1000px;
+  margin-right: 7px;
+}
+.right-button6 {
+  float: right;
+  margin-bottom: 2000px;
+  margin-left: 1000px;
+  margin-right: 13px;
+}
+
+.small-text {
+  font-size: 70%; /* Adjust the size as needed */
+}
+
+.left-button7 {
+  float: left;
+  margin-right: 10px;
+  margin-left: -1605px;
+  margin-top: 600px;
+}
+
+.right-button7 {
+  float: right;
+  margin-top: 600px;
+  margin-right: 7px;
+}
